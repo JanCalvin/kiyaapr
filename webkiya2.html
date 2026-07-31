@@ -50,14 +50,14 @@
     /* Button Styles */
     .btn-group {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 25px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 12px 22px;
+      padding: 12px 25px;
       font-size: 0.95rem;
       font-weight: bold;
       border: none;
@@ -81,19 +81,6 @@
       color: white;
     }
 
-    .btn-num {
-      background-color: #74b9ff;
-      color: white;
-      font-size: 1.1rem;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .btn-restart {
       background-color: rgba(255, 255, 255, 0.3);
       color: currentColor;
@@ -110,7 +97,7 @@
       margin-bottom: 15px;
     }
 
-    /* Styles Langkah 2 (Mini Games & Penasaran) */
+    /* Styles Langkah 2 */
     .theme-step-2 {
       background: linear-gradient(135deg, #ffeaa7, #fab1a0, #ff7675);
     }
@@ -120,49 +107,6 @@
       font-size: 1.35rem;
       margin-bottom: 15px;
       line-height: 1.4;
-    }
-
-    .minigame-box {
-      background: rgba(255, 255, 255, 0.75);
-      padding: 18px 15px;
-      border-radius: 15px;
-      margin-top: 15px;
-      border: 2px dashed #ff6b81;
-    }
-
-    /* STYLE GAME KARTU */
-    .card-grid {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 15px;
-      flex-wrap: wrap;
-    }
-
-    .card-item {
-      width: 80px;
-      height: 105px;
-      background: #ff6b81;
-      border-radius: 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: transform 0.3s, background 0.3s;
-      user-select: none;
-    }
-
-    .card-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .card-item.revealed {
-      background: white;
-      border: 3px solid #ff6b81;
-      cursor: default;
     }
 
     /* ANIMASI FOTO MUTER MENGELILINGI LAYAR WEBSITES */
@@ -192,7 +136,7 @@
       100% { top: 15px; left: 15px; }
     }
 
-    /* POP-UP MODAL DENGAN POSISI DINAMIS ACAK */
+    /* MODAL POP-UP (POSISI ACAK / RANDOM) */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -200,36 +144,36 @@
       width: 100vw;
       height: 100vh;
       background: rgba(0, 0, 0, 0.4);
-      z-index: 1000;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .modal-box {
       position: absolute;
       background: white;
-      padding: 20px 16px;
+      padding: 20px;
       border-radius: 20px;
       text-align: center;
-      width: 85vw;
-      max-width: 290px; /* Ukuran pas untuk layar HP agar tidak sempit */
+      width: 260px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      animation: popIn 0.25s ease forwards;
+      animation: popIn 0.25s ease;
       border: 3px solid #ff6b81;
-      transition: top 0.3s ease, left 0.3s ease;
     }
 
     @keyframes popIn {
-      0% { transform: scale(0.6); opacity: 0; }
+      0% { transform: scale(0.5); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
 
     .modal-box h3 {
       color: #ff4757;
-      margin-bottom: 12px;
-      font-size: 0.95rem;
-      line-height: 1.4;
+      margin-bottom: 15px;
+      font-size: 1rem;
     }
 
-    /* Styles Langkah 3 (Celebration) */
+    /* Styles Langkah 3 */
     .theme-step-3 {
       background: linear-gradient(135deg, #ff9a9e, #fecfef, #a1c4fd);
     }
@@ -238,6 +182,7 @@
       position: relative;
     }
 
+    /* Tombol Rahasia Kecil di Pojok Kanan Atas */
     .secret-btn {
       position: absolute;
       top: -10px;
@@ -267,7 +212,7 @@
       margin-bottom: 15px;
     }
 
-    /* GALERI FOTO */
+    /* GALERI 10 FOTO DENGAN BINGKAI POLAROID ELEGANT */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -287,6 +232,7 @@
       border-radius: 10px;
     }
 
+    /* Bingkai Foto */
     .photo-frame {
       background: #ffffff;
       padding: 6px 6px 12px 6px;
@@ -323,7 +269,7 @@
       margin-bottom: 10px;
     }
 
-    /* Particles */
+    /* Particles (Bunga & Love) */
     .particle {
       position: absolute;
       top: -20px;
@@ -368,6 +314,7 @@
       padding: 30px 20px !important;
     }
 
+    /* FORCE FONT HURUF SAMBUNG */
     .handwritten-text, 
     .handwritten-text p, 
     .handwritten-text span {
@@ -379,6 +326,7 @@
       text-shadow: 0 2px 4px rgba(0,0,0,0.4);
     }
 
+    /* MUSIC CONTROLLER FLOATING BUTTON */
     .music-btn {
       position: fixed;
       bottom: 20px;
@@ -397,6 +345,7 @@
       align-items: center;
     }
 
+    /* PENYESUAIAN KHUSUS LAYAR HP (MOBILE OPTIMIZATION) */
     @media (max-width: 480px) {
       .orbit-photo {
         width: 90px;
@@ -413,7 +362,7 @@
         font-size: 1.45rem !important;
       }
       .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 Kolom pas di layar HP */
       }
     }
   </style>
@@ -447,53 +396,26 @@
       </div>
     </div>
 
-    <!-- STEP 2: SAMBUTAN & DUA MINIGAME -->
+    <!-- STEP 2: SAMBUTAN & PERTANYAAN PENASARAN -->
     <div id="step-2" class="step-2 hidden">
       <h2>🌸 SELAMAT DATANG SI CANTIK LUCU MENGGEMASKAN DARI CIBINONG 🌸</h2>
-      <p style="font-weight: bold; color: #555; margin-bottom: 10px; font-size: 0.9rem;">PERJALANAN KIYAAA DIMULAI DARI SINI!</p>
+      <p style="font-weight: bold; color: #555; margin-bottom: 15px; font-size: 0.9rem;">PERJALANAN KIYAAA DIMULAI DARI SINI!</p>
       
-      <!-- GAME 1: TEBAK ANGKA -->
-      <div id="game-1" class="minigame-box">
-        <p style="font-weight: 600; color: #d63031; font-size: 0.95rem;">🎮 Mini Challenge #1: Tebak Angka!</p>
-        <p style="font-size: 0.85rem; color: #444; margin-top: 5px;">Tebak angka beruntung (1 - 5) untuk membuka gerbang pertama! 🔑</p>
-        <div class="btn-group" style="margin-top: 12px;">
-          <button class="btn btn-num" onclick="guessNumber(1)">1</button>
-          <button class="btn btn-num" onclick="guessNumber(2)">2</button>
-          <button class="btn btn-num" onclick="guessNumber(3)">3</button>
-          <button class="btn btn-num" onclick="guessNumber(4)">4</button>
-          <button class="btn btn-num" onclick="guessNumber(5)">5</button>
-        </div>
-      </div>
-
-      <!-- GAME 2: TEBAK KARTU BERUNTUNG -->
-      <div id="game-2" class="minigame-box hidden">
-        <p style="font-weight: 600; color: #d63031; font-size: 0.95rem;">🎴 Mini Challenge #2: Kartu Keberuntungan!</p>
-        <p style="font-size: 0.85rem; color: #444; margin-top: 5px;">Pilih 1 kartu di bawah ini yang menyimpan mahkota rahasia! 👑</p>
-        
-        <div class="card-grid">
-          <div class="card-item" onclick="flipCard(this, 0)">❓</div>
-          <div class="card-item" onclick="flipCard(this, 1)">❓</div>
-          <div class="card-item" onclick="flipCard(this, 2)">❓</div>
-        </div>
-      </div>
-
-      <!-- PERTANYAAN PENASARAN -->
-      <div id="curious-part" class="hidden" style="margin-top: 20px;">
-        <p style="font-size: 1rem; color: #2d3436; font-weight: 600;">Apakah KAMUHH penasaran setelah ini ada apa? 👀</p>
-        <div class="btn-group">
-          <button class="btn btn-primary" onclick="handleCurious(true)">YA!</button>
-          <button class="btn btn-secondary" onclick="handleCurious(false)">TIDAK</button>
-        </div>
+      <p style="margin-top: 10px; font-size: 0.95rem;">Apakah KAMUHH penasaran setelah ini ada apa? 👀 </p>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="handleCurious(true)">YA!</button>
+        <button class="btn btn-secondary" onclick="handleCurious(false)">TIDAK</button>
       </div>
     </div>
 
     <!-- STEP 3: SELESAI / CELEBRATION -->
     <div id="step-3" class="step-3 hidden">
+      <!-- Tombol Rahasia Kecil di Pojok Kanan Atas -->
       <button class="secret-btn" onclick="goToStep4()" title="Sensitif/Rahasia">🌧️</button>
 
       <h1>🎉 Happy Internship Completion! 🎉</h1>
       
-      <!-- Gallery 10 Foto -->
+      <!-- Gallery 10 Foto dengan Bingkai Polaroid -->
       <div class="gallery">
         <div class="photo-frame"><img src="FOTO1.jpeg" alt="Memory 1" onerror="this.src='https://via.placeholder.com/120/ff7675/ffffff?text=FOTO1.jpeg'"></div>
         <div class="photo-frame"><img src="FOTO2.jpeg" alt="Memory 2" onerror="this.src='https://via.placeholder.com/120/74b9ff/ffffff?text=FOTO2.jpeg'"></div>
@@ -517,10 +439,11 @@
         </p>
       </div>
 
+      <!-- Tombol Restart -->
       <button class="btn btn-restart" onclick="restartWebsite()">↺ Ulangi Lagi Yuk!</button>
     </div>
 
-    <!-- STEP 4: HALAMAN HUJAN -->
+    <!-- STEP 4: HALAMAN HUJAN (PESAN SECRET / IKHLAS) -->
     <div id="step-4" class="step-4 hidden">
       <div class="handwritten-text">
         <p>I'm so happy to have known you.</p>
@@ -533,6 +456,7 @@
         </p>
       </div>
 
+      <!-- Tombol Restart -->
       <button class="btn btn-restart" onclick="restartWebsite()">↺ Ulangi Lagi Yuk!</button>
     </div>
 
@@ -562,32 +486,22 @@
     const bgMusic = document.getElementById('bg-music');
     const musicToggle = document.getElementById('music-toggle');
 
-    const game1 = document.getElementById('game-1');
-    const game2 = document.getElementById('game-2');
-    const curiousPart = document.getElementById('curious-part');
-
     let confirmState = 0; 
     let isMusicPlaying = false;
-    
-    // GAME 1 VARIABEL
-    let targetNumber = Math.floor(Math.random() * 5) + 1; 
 
-    // GAME 2 VARIABEL
-    let cardContents = ['💣', '👑', '🌸'];
-    cardContents.sort(() => Math.random() - 0.5); 
-    let isCardGameCleared = false;
-
+    // Play Musik
     function playMusic() {
       if (!isMusicPlaying) {
         bgMusic.play().then(() => {
           isMusicPlaying = true;
           musicToggle.innerText = '🎵';
         }).catch(err => {
-          console.log("Autoplay diblokir browser.");
+          console.log("Autoplay diblokir browser, pengguna harus interaksi dulu.");
         });
       }
     }
 
+    // Toggle Music Play/Pause
     function toggleMusic() {
       if (isMusicPlaying) {
         bgMusic.pause();
@@ -600,6 +514,7 @@
       }
     }
 
+    // Pindah ke Step 2 & Mulai Musik
     function goToStep2() {
       playMusic();
       step1.classList.add('hidden');
@@ -609,75 +524,50 @@
       createParticles(['🌸', '🌺', '🌼', '✨'], 15);
     }
 
-    // LOGIKA GAME 1
-    function guessNumber(num) {
-      if (num === targetNumber) {
-        showCustomModal("YEAY BENAR! 🎉 Kamu berhasil di Challenge #1!", () => {
-          game1.classList.add('hidden');
-          game2.classList.remove('hidden');
-        });
-      } else {
-        showCustomModal("Teteeew, tebakanmu salah 😜 Coba pilih angka yang lain!", null);
-      }
-    }
-
-    // LOGIKA GAME 2
-    function flipCard(cardEl, index) {
-      if (isCardGameCleared || cardEl.classList.contains('revealed')) return;
-
-      const content = cardContents[index];
-      cardEl.innerText = content;
-      cardEl.classList.add('revealed');
-
-      if (content === '👑') {
-        isCardGameCleared = true;
-        showCustomModal("HURRAY! Kamu menemukan Mahkota Cantik! 👑✨", () => {
-          game2.classList.add('hidden');
-          curiousPart.classList.remove('hidden');
-        });
-      } else if (content === '💣') {
-        showCustomModal("ZONK! Dapet bom 💣 Coba tebak kartu yang lain!", null);
-      } else {
-        showCustomModal("Hampir! Ini bunga 🌸 Coba tebak kartu satunya lagi!", null);
-      }
-    }
-
-    // HANDLER PERTANYAAN PENASARAN
+    // Handle Pertanyaan Penasaran
     function handleCurious(isCurious) {
       if (!isCurious) {
-        showCustomModal("HARUS PENASARAN DONG! 😤✨ Coba klik YA!", null);
+        showRandomModal("HARUS PENASARAN! 😤✨", () => {
+          startConfirmSequence();
+        });
       } else {
         startConfirmSequence();
       }
     }
 
+    // Urutan 3 Kali Konfirmasi
     function startConfirmSequence() {
       confirmState = 1;
-      showCustomModal("APAKAH KAMUUU YAKIN? 🤔", handleConfirmNext);
+      showRandomModal("APAKAH KAMUUU YAKIN? 🤔", handleConfirmNext);
     }
 
     function handleConfirmNext() {
       if (confirmState === 1) {
         confirmState = 2;
-        showCustomModal("APAKAH KIYAA CANTIKK YAKIN YAKIN? 🤨✨", handleConfirmNext);
+        showRandomModal("APAKAH KIYAA CANTIKK YAKIN YAKIN? 🤨✨", handleConfirmNext);
       } else if (confirmState === 2) {
         confirmState = 3;
-        showCustomModal("APAKAH KIYAA YANG PALINGG MENGGEMASKAN INIHH YAKIN YAKIN YAKIN??? 😱💥", handleConfirmNext);
+        showRandomModal("APAKAH KIYAA YANG PALINGG MENGGEMASKAN INIHH YAKIN YAKIN YAKIN??? 😱💥", handleConfirmNext);
       } else if (confirmState === 3) {
         goToStep3();
       }
     }
 
-    // POP-UP MODAL ACAK AMAN DI HP (Muter-muter acak tapi aman dari batas layar)
-    function showCustomModal(text, onClick) {
+    // Show Custom Modal dengan Posisi ACAK
+    function showRandomModal(text, onClick) {
       modalText.innerText = text;
-
-      // Batasan acak aman: top (15% sampai 65%), left (10% sampai 55%)
-      const randomTop = Math.floor(Math.random() * 50) + 15; 
-      const randomLeft = Math.floor(Math.random() * 45) + 10; 
-
-      modalBox.style.top = `${randomTop}%`;
-      modalBox.style.left = `${randomLeft}%`;
+      
+      const positions = [
+        { top: '20%', left: '10%' },
+        { top: '20%', left: '50%' },
+        { top: '55%', left: '10%' },
+        { top: '55%', left: '50%' },
+        { top: '38%', left: '30%' }
+      ];
+      
+      const randomPos = positions[Math.floor(Math.random() * positions.length)];
+      modalBox.style.top = randomPos.top;
+      modalBox.style.left = randomPos.left;
 
       modal.classList.remove('hidden');
       modalBtn.onclick = () => {
@@ -686,6 +576,7 @@
       };
     }
 
+    // Pindah ke Step 3 (Final Celebration)
     function goToStep3() {
       step2.classList.add('hidden');
       step3.classList.remove('hidden');
@@ -696,6 +587,7 @@
       createParticles(['💖', '🌸', '✨', '💕', '🌹', '💗'], 30);
     }
 
+    // Pindah ke Step 4 (Rahasia - Hujan & Sincere Sad Message)
     function goToStep4() {
       step3.classList.add('hidden');
       step4.classList.remove('hidden');
@@ -708,28 +600,13 @@
       createRain(50);
     }
 
+    // Reset ke Awal (FIXED & DIBERSIHKAN LOGIKANYA)
     function restartWebsite() {
       step3.classList.add('hidden');
       step4.classList.add('hidden');
       step2.classList.add('hidden');
       step1.classList.remove('hidden');
       
-      // Reset Games
-      game1.classList.remove('hidden');
-      game2.classList.add('hidden');
-      curiousPart.classList.add('hidden');
-      
-      targetNumber = Math.floor(Math.random() * 5) + 1;
-      cardContents.sort(() => Math.random() - 0.5);
-      isCardGameCleared = false;
-
-      // Reset Kartu di DOM
-      const cards = document.querySelectorAll('.card-item');
-      cards.forEach(c => {
-        c.innerText = '❓';
-        c.classList.remove('revealed');
-      });
-
       orbitPhoto.classList.add('hidden');
       body.className = '';
       mainCard.className = 'container';
@@ -737,6 +614,7 @@
       confirmState = 0;
     }
 
+    // Generator Partikel Melayang
     function createParticles(items, count) {
       for (let i = 0; i < count; i++) {
         const particle = document.createElement('div');
@@ -750,6 +628,7 @@
       }
     }
 
+    // Generator Hujan
     function createRain(count) {
       for (let i = 0; i < count; i++) {
         const drop = document.createElement('div');
